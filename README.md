@@ -3,14 +3,14 @@ Qt-based app to control an EV Charger at IISC. It allows setting voltages for th
 
 Features:
 
-    LCD interface for inputting voltage values.
-    Control for three separate charging ports.
-    Real-time interaction with the EV Charger hardware.
-    Simple, intuitive interface for adjusting port settings.
+    a.LCD interface for inputting voltage values.
+    b.Control for three separate charging ports.
+    c.Real-time interaction with the EV Charger hardware.
+    d.Simple, intuitive interface for adjusting port settings.
 
 Usage:
 
-    Use the LCD interface to input desired voltages for each port.
-    The application updates the EV Charger configuration based on the provided voltage settings.
+    a.Use the LCD interface to input desired voltages for each port.
+    b.The application updates the EV Charger configuration based on the provided voltage settings.
 
 
