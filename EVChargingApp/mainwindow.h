@@ -45,12 +45,20 @@ private slots:
     void on_actionHome_triggered();
     void on_actionGrid_On_Off_triggered(bool checked);
     void updateGridStatus(QString actionType);
+    void updateModes1(QString portID,QString actionType);
+    void updateModes2(QString portID,QString actionType);
     void updatePort1Status(QString portID, QString actionType,
                           QString voltage, QString current, QString percentage, QString type);
     void updatePort2Status(QString portID, QString actionType,
                           QString voltage, QString current, QString percentage, QString type);
     void updatePort3Status(QString portID, QString actionType,
                           QString voltage, QString current, QString percentage, QString type);
+
+
+
+    void updatePort5Status(QString portID, QString actionType,
+                          QString voltage, QString current, QString percentage, QString type);
+
     //void updatePort1Request(QString portID,QString actionType);
    // void updatePort2Request(QString portID,QString actionType);
    // void updatePort3Request(QString portID,QString actionType);
@@ -73,6 +81,23 @@ private slots:
 
 
 
+
+
+
+    //void on_ModeButton_1_clicked();
+
+    //void on_ModeButton_2_clicked();
+
+    void on_pushButton_Proceed_4_clicked();
+
+
+
+
+    void on_pushButton_Proceed_5_clicked();
+
+    void on_horizontalSlider_voltage_4_valueChanged(int value);
+
+    void on_spinBox_voltage_4_valueChanged(int arg1);
 
 signals:
     void resizeEvent(QResizeEvent *event);
@@ -100,6 +125,7 @@ private:
     QString previousPort1Status = "";
     QString previousPort2Status = "";
     QString previousPort3Status = "";
+    QString previousMode2status = "";
     double time;
 };
 

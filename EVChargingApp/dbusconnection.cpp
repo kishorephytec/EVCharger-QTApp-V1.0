@@ -128,6 +128,10 @@ bool DbusConnection::StartCharging(QString portId, QString voltage)
     case 3:
         data = PORT_C_ON;
         break;
+
+    case 5:
+        data = PORT_D_ON;
+        break;
     default:
         qDebug()<<__func__<<"Invalid";
     }
@@ -167,6 +171,9 @@ bool DbusConnection::StopCharging(QString portId, QString voltage)
         break;
     case 3:
         data = PORT_C_OFF;
+        break;
+    case 5:
+        data = PORT_D_OFF;
         break;
     default:
         qDebug()<<__func__<<"Invalid";
@@ -401,6 +408,21 @@ void DbusConnection::parseReceivedData(QString inputData)
 
 
     }
+    else if(portID == "5")
+    {
+
+        emit DBusDataReceived(portID, actionType, voltage, current, percentage, type);
+        qDebug()<<"Data emitted to UI for port "<<portID;
+
+
+    }
+
+    else
+    {
+        Q_UNUSED(0)
+    }
+
+
 
     // Clean up
     json_object_put(root);
